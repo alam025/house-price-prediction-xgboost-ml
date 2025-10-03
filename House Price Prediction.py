@@ -5,6 +5,15 @@
 
 # In[3]:
 
+"""
+Smart Property Valuation System
+XGBoost-Based House Price Prediction Model
+Author: Modassir Alam
+Version: 1.0.0
+
+"""
+
+
 
 pip install xgboost
 
