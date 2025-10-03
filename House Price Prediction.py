@@ -158,7 +158,7 @@ test_data_prediction = model.predict(X_test)
 
 # In[45]:
 
-
+#Add testing predictions and metrics
 # R square error
 score_1 = metrics.r2_score(Y_test,test_data_prediction)
 
