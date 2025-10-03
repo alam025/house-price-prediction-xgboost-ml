@@ -5,6 +5,15 @@
 
 # In[3]:
 
+"""
+Smart Property Valuation System
+XGBoost-Based House Price Prediction Model
+Author: Modassir Alam
+Version: 1.0.0
+
+"""
+
+
 
 pip install xgboost
 
@@ -19,6 +28,7 @@ import seaborn as sns
 import sklearn.datasets
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
+from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 
 
@@ -26,7 +36,7 @@ from sklearn import metrics
 
 # In[20]:
 
-
+# Load dataset
 url = "https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv"
 house_price_dataset = pd.read_csv(url)
 
@@ -45,7 +55,7 @@ house_price_dataset.shape
 
 
 # In[22]:
-
+# data exploration code to House Price Prediction.py
 
 #check for missing values
 house_price_dataset.isnull().sum().sum()
@@ -60,7 +70,7 @@ house_price_dataset.describe()
 
 # In[24]:
 
-
+#Add correlation analysis and heatmap
 correlation = house_price_dataset.corr()
 
 
@@ -75,7 +85,7 @@ sns.heatmap(correlation,cbar=True,square=True, fmt='.1f', annot=True,annot_kws={
 # #Splitting the data and Target
 
 # In[27]:
-
+#Add data splitting
 
 X= house_price_dataset.drop(['Price'],axis=1)
 Y= house_price_dataset['Price']
@@ -92,7 +102,7 @@ print(Y)
 
 # In[33]:
 
-
+#Add train-test split
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.2,random_state=2)
 
 
@@ -108,14 +118,14 @@ print(X.shape,X_train.shape,X_test.shape)
 
 # In[36]:
 
-
+#Add model initialization
 # loading the model
 model = XGBRegressor()
 
 
 # In[38]:
 
-
+#Add model training
 model.fit(X_train,Y_train)
 
 
@@ -123,7 +133,7 @@ model.fit(X_train,Y_train)
 
 # In[39]:
 
-
+#Add training predictions and metrics
 #accuracy for prediction on training data
 training_data_prediction = model.predict(X_train)
 
@@ -158,7 +168,7 @@ test_data_prediction = model.predict(X_test)
 
 # In[45]:
 
-
+#Add testing predictions and metrics
 # R square error
 score_1 = metrics.r2_score(Y_test,test_data_prediction)
 
@@ -172,7 +182,9 @@ print("Mean Absolute error: ",score_2)
 # #Visualizing the actual prices and predicted prices 
 
 # In[47]:
+#Enhance plots with better colors, labels, and styling
 
+#Add training set visualization
 
 plt.scatter(Y_train,training_data_prediction)
 plt.xlabel("Actual Prices")
