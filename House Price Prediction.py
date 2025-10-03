@@ -123,7 +123,7 @@ model.fit(X_train,Y_train)
 
 # In[39]:
 
-
+#Add training predictions and metrics
 #accuracy for prediction on training data
 training_data_prediction = model.predict(X_train)
 
