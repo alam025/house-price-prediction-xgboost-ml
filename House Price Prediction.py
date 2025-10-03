@@ -181,6 +181,8 @@ print("Mean Absolute error: ",score_2)
 # #Visualizing the actual prices and predicted prices 
 
 # In[47]:
+#Enhance plots with better colors, labels, and styling
+
 #Add training set visualization
 
 plt.scatter(Y_train,training_data_prediction)
