@@ -75,7 +75,7 @@ sns.heatmap(correlation,cbar=True,square=True, fmt='.1f', annot=True,annot_kws={
 # #Splitting the data and Target
 
 # In[27]:
-
+#Add data splitting
 
 X= house_price_dataset.drop(['Price'],axis=1)
 Y= house_price_dataset['Price']
