@@ -45,7 +45,7 @@ house_price_dataset.shape
 
 
 # In[22]:
-
+# data exploration code to House Price Prediction.py
 
 #check for missing values
 house_price_dataset.isnull().sum().sum()
