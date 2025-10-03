@@ -28,6 +28,7 @@ import seaborn as sns
 import sklearn.datasets
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
+from sklearn.preprocessing import StandardScaler
 from sklearn import metrics
 
 
