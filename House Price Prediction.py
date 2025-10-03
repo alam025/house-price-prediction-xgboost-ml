@@ -60,7 +60,7 @@ house_price_dataset.describe()
 
 # In[24]:
 
-
+#Add correlation analysis and heatmap
 correlation = house_price_dataset.corr()
 
 
