@@ -108,7 +108,7 @@ print(X.shape,X_train.shape,X_test.shape)
 
 # In[36]:
 
-
+#Add model initialization
 # loading the model
 model = XGBRegressor()
 
