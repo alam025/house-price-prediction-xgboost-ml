@@ -26,7 +26,7 @@ from sklearn import metrics
 
 # In[20]:
 
-
+# Load dataset
 url = "https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv"
 house_price_dataset = pd.read_csv(url)
 
